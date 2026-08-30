@@ -92,7 +92,8 @@ h3 {
 }
 
 .arrow {
-  text-align: center;
+  /* text-align: center; */
+  padding-left: 20px;
   opacity: 0.7;
 }
 
@@ -389,5 +390,14 @@ h3 {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     padding: 0 2px;
+  }
+}
+
+@media (pointer: fine) {
+  a span {
+    display: none;
+  }
+  a:hover span {
+    display: inline-block;
   }
 }
