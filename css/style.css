@@ -328,9 +328,10 @@ h3 {
 }
 
 .accordion-name:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   color: #e0e0e0;
-  box-shadow: var(--boxShadow1);
+  color: red;
+  /* box-shadow: var(--boxShadow1); */
 }
 
 .accordionActive,
@@ -346,7 +347,7 @@ h3 {
   /* color: var(--accordionColor2); */
   float: right;
   margin-left: 5px;
-  color: #333;
+  color: #000;
   font-size: 14px;
   transition: 0.4s ease-out;
 }
