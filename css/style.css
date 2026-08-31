@@ -264,7 +264,6 @@ h3 {
   /* padding: 16px 16px 16px 0; */
   padding: 10px 16px;
   /* margin-left: 20px; */
-
   border: none;
   /* border-top: 1px solid var(--accordionColor5); */
   border-top: 1px dotted #666;
@@ -285,7 +284,7 @@ h3 {
 
 .accordion:after {
   content: "\002B";
-  color: var(--accordionColor2);
+  /* color: var(--accordionColor2); */
   color: red;
   float: right;
   margin-left: 5px;
@@ -320,9 +319,7 @@ h3 {
 
 .accordion-name {
   letter-spacing: var(--letterSpacing2);
-  /* text-decoration: underline dotted;
-  text-decoration-color: #111;
-  text-underline-offset: 10px; */
+  /* letter-spacing: 4px; */
   padding: 20px;
   transition: 500ms ease-out;
 }
@@ -337,7 +334,8 @@ h3 {
 .accordionActive,
 .accordion1:hover,
 .accordion2:hover {
-  color: #333;
+  /* color: #333; */
+  color: hotpink;
   letter-spacing: 2px;
 }
 
@@ -354,16 +352,17 @@ h3 {
 
 .accordion1:hover:after,
 .accordion2:hover:after {
-  color: #111;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* color: #111; */
+  color: green;
+  /* background-color: rgba(0, 0, 0, 0.05);
   padding: 2px 8px;
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 .accordionActive:after {
   content: "show less \2212\2212";
   font-size: 14px;
-  color: #d0d0d0;
+  /* color: #d0d0d0; */
   color: #111;
 }
 
