@@ -8,16 +8,21 @@
   --letterSpacing2: 1px;
   --letterSpacing3: 1.4px;
   --letterSpacing4: 4px;
+  --letterSpacing5: 0.4px;
 
-  --color1: #99a3a3;
-
-  --accordionColor1: #b0b0b0;
-  --accordionColor2: #cccccc;
-  --accordionColor3: #d0d0d0;
-  --accordionColor4: #e0e0e0;
-  --accordionColor5: #505050;
-
-  --copyColor1: #404040;
+  --color1: #000000;
+  --color2: #101010;
+  --color3: #202020;
+  --color4: #404040;
+  --color5: #4e5252;
+  --color6: #666666;
+  --color7: #d0d0d0;
+  --color8: #e0e0e0;
+  --color9: #304a30;
+  --color10: #a0b8ad;
+  --color11: #84a696;
+  --color12: #f0f0f0;
+  --color13: #ffffff;
 }
 
 *,
@@ -39,8 +44,8 @@ body {
 
 header {
   display: flex;
-  background-color: #101010;
-  color: #e0e0e0;
+  background-color: var(--color2);
+  color: var(--color8);
   font-size: 32px;
   padding: 40px 30px;
   letter-spacing: var(--letterSpacing4);
@@ -56,15 +61,15 @@ header {
 
 .nav a {
   font-size: 16px;
-  color: #d0d0d0;
+  color: var(--color7);
   padding: 0 10px;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .nav a:hover {
-  color: #58a785;
+  color: var(--color11);
 }
 
 .container {
@@ -120,7 +125,7 @@ h3 {
 }
 
 .about {
-  color: #111;
+  color: var(--color2);
   padding: 10px 20px 0 20px;
 }
 
@@ -138,7 +143,7 @@ h3 {
   grid-template-rows: subgrid;
   grid-row: span 5;
   gap: 6px;
-  background-color: #f0f0f0;
+  background-color: var(--color12);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   overflow: hidden;
@@ -150,12 +155,12 @@ h3 {
 }
 
 .card:hover {
-  background-color: #fff;
+  background-color: var(--color12);
   box-shadow: var(--boxShadow1);
 }
 
 .card-img {
-  background-color: #f0f0f0;
+  background-color: var(--color12);
   width: 100%;
   border: none;
   aspect-ratio: 16/9;
@@ -182,8 +187,8 @@ h3 {
 }
 
 .tool {
-  background-color: #4e5252;
-  color: #e0e0e0;
+  background-color: var(--color5);
+  color: var(--color8);
   font-size: 12px;
   letter-spacing: var(--letterSpacing2);
   border-radius: 4px;
@@ -197,8 +202,7 @@ h3 {
 }
 
 .btn {
-  background-color: #c0c0c0;
-  background-color: #a0b8ad;
+  background-color: var(--color10);
   font-size: 14px;
   border-radius: 6px;
   padding: 6px 12px;
@@ -209,13 +213,13 @@ h3 {
 }
 
 .btn:hover {
-  background-color: #84a696;
-  color: #fff;
+  background-color: var(--color11);
+  color: var(--color13);
   box-shadow: var(--boxShadow1);
 }
 
 .btn a {
-  color: #111;
+  color: var(--color2);
   text-decoration: none;
 }
 
@@ -233,15 +237,15 @@ h3 {
   font-family: var(--font1);
   font-size: 18px;
   background-color: transparent;
-  color: #111;
+  color: var(--color2);
   text-align: left;
   letter-spacing: var(--letterSpacing1);
   padding: 10px 16px;
   border: none;
-  border-top: 1px dotted #666;
+  border-top: 1px dotted var(--color6);
   outline: none;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.4s ease-out;
 }
 
 .accordion1 {
@@ -249,15 +253,14 @@ h3 {
 }
 
 .accordion-name {
-  color: #101010;
-  color: #000;
-  letter-spacing: 0.7px;
+  color: var(--color2);
+  letter-spacing: var(--letterSpacing1);
   padding: 20px;
   transition: 500ms ease-out;
 }
 
 .accordion-name:hover {
-  color: #303030;
+  color: var(--color4);
 }
 
 .accordion1:after,
@@ -265,29 +268,30 @@ h3 {
   content: "show more \002B\002B";
   float: right;
   margin-left: 5px;
-  color: #000;
+  color: var(--color2);
   font-size: 14px;
   transition: 0.4s ease-out;
 }
 
 .accordion1:hover:after,
 .accordion2:hover:after {
-  color: #202020;
+  color: var(--color3);
   letter-spacing: var(--letterSpacing3);
 }
 
 .accordionActive:after {
   content: "show less \2212\2212";
   font-size: 14px;
-  color: #101010;
+  color: var(--color2);
 }
 
 .accordionActive:hover {
-  color: #304a30;
+  color: var(--color9);
 }
 
 .accordionActive:hover:after {
-  color: #304a30;
+  color: var(--color9);
+  letter-spacing: var(--letterSpacing5);
 }
 
 .panel1,
@@ -307,7 +311,7 @@ h3 {
   position: fixed;
   bottom: 6px;
   right: 2px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .scroll-up:hover {
@@ -320,7 +324,7 @@ h3 {
 
 .copy {
   background-color: var(--backgroundColor1);
-  color: var(--copyColor1);
+  color: var(--color4);
   font-size: 14px;
   text-align: center;
   letter-spacing: var(--letterSpacing1);
