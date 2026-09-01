@@ -2,12 +2,12 @@
 
 :root {
   --font1: "Roboto", sans-serif;
-  /* --backgroundColor1: #99a3a3; */
   --backgroundColor1: #a0b8ad;
   --boxShadow1: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --letterSpacing1: 0.7px;
   --letterSpacing2: 1px;
-  --letterSpacing3: 4px;
+  --letterSpacing3: 1.4px;
+  --letterSpacing4: 4px;
 
   --color1: #99a3a3;
 
@@ -43,7 +43,7 @@ header {
   color: #e0e0e0;
   font-size: 32px;
   padding: 40px 30px;
-  letter-spacing: var(--letterSpacing3);
+  letter-spacing: var(--letterSpacing4);
 }
 
 .header-top {
@@ -64,7 +64,6 @@ header {
 }
 
 .nav a:hover {
-  color: green;
   color: #58a785;
 }
 
@@ -87,17 +86,17 @@ header {
   width: 100%;
 }
 
+#projects {
+  padding-bottom: 10px;
+}
+
 h2 {
   letter-spacing: var(--letterSpacing1);
   padding: 24px 0 0 20px;
 }
 
-#projects {
-  padding-bottom: 10px;
-}
-
 h3 {
-  letter-spacing: var(--letterSpacing3);
+  letter-spacing: var(--letterSpacing4);
   padding: 40px 0 40px 20px;
 }
 
@@ -132,7 +131,6 @@ h3 {
   align-items: stretch;
   justify-content: left;
   padding: 0 20px 20px 20px;
-  /* margin-top: 20px; */
 }
 
 .card {
@@ -227,26 +225,6 @@ h3 {
   vertical-align: middle;
 }
 
-/* .accordion1,
-.accordion2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  color: var(--accordionColor1);
-  font-family: var(--font1);
-  font-size: 18px;
-  width: calc(100% - 40px);
-  letter-spacing: var(--letterSpacing);
-  padding: 30px 20px;
-  margin: 0 0 16px 20px;
-  outline: none;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: 500ms ease-out;
-} */
-
 .accordion1,
 .accordion2 {
   display: flex;
@@ -254,18 +232,12 @@ h3 {
   justify-content: space-between;
   font-family: var(--font1);
   font-size: 18px;
-  /* width: 100%; */
-  /* width: calc(100% - 40px); */
   background-color: transparent;
-  /* color: var(--accordionColor1); */
   color: #111;
   text-align: left;
-  letter-spacing: var(--letterSpacing);
-  /* padding: 16px 16px 16px 0; */
+  letter-spacing: var(--letterSpacing1);
   padding: 10px 16px;
-  /* margin-left: 20px; */
   border: none;
-  /* border-top: 1px solid var(--accordionColor5); */
   border-top: 1px dotted #666;
   outline: none;
   cursor: pointer;
@@ -276,22 +248,46 @@ h3 {
   border-top: none;
 }
 
-/* .accordionActive,
-.accordion:hover {
-  color: var(--accordionColor4);
-  color: red;
-} */
+.accordion-name {
+  color: #101010;
+  color: #000;
+  letter-spacing: 0.7px;
+  padding: 20px;
+  transition: 500ms ease-out;
+}
 
-.accordion:after {
-  content: "\002B";
-  /* color: var(--accordionColor2); */
-  color: red;
+.accordion-name:hover {
+  color: #303030;
+}
+
+.accordion1:after,
+.accordion2:after {
+  content: "show more \002B\002B";
   float: right;
   margin-left: 5px;
+  color: #000;
+  font-size: 14px;
+  transition: 0.4s ease-out;
+}
+
+.accordion1:hover:after,
+.accordion2:hover:after {
+  color: #202020;
+  letter-spacing: var(--letterSpacing3);
 }
 
 .accordionActive:after {
-  content: "\2212";
+  content: "show less \2212\2212";
+  font-size: 14px;
+  color: #101010;
+}
+
+.accordionActive:hover {
+  color: #304a30;
+}
+
+.accordionActive:hover:after {
+  color: #304a30;
 }
 
 .panel1,
@@ -303,90 +299,18 @@ h3 {
   margin-bottom: 80px;
 }
 
-.accordion1.active,
-.accordion2.active {
-  background-color: #ccc;
-  background-color: red;
-}
-
-/* .accordion-name {
-  letter-spacing: var(--letterSpacing2);
-  text-decoration: underline dotted;
-  text-decoration-color: #111;
-  text-underline-offset: 10px;
-  transition: 500ms ease-out;
-} */
-
-.accordion-name {
-  letter-spacing: var(--letterSpacing2);
-  /* letter-spacing: 4px; */
-  padding: 20px;
-  transition: 500ms ease-out;
-}
-
-.accordion-name:hover {
-  /* background-color: rgba(0, 0, 0, 0.05); */
-  color: #e0e0e0;
-  color: red;
-  /* box-shadow: var(--boxShadow1); */
-}
-
-.accordionActive,
-.accordion1:hover,
-.accordion2:hover {
-  /* color: #333; */
-  color: hotpink;
-  letter-spacing: 2px;
-}
-
-.accordion1:after,
-.accordion2:after {
-  content: "show more \002B\002B";
-  /* color: var(--accordionColor2); */
-  float: right;
-  margin-left: 5px;
-  color: #000;
-  font-size: 14px;
-  transition: 0.4s ease-out;
-}
-
-.accordion1:hover:after,
-.accordion2:hover:after {
-  /* color: #111; */
-  color: green;
-  /* background-color: rgba(0, 0, 0, 0.05);
-  padding: 2px 8px;
-  border-radius: 4px; */
-}
-
-.accordionActive:after {
-  content: "show less \2212\2212";
-  font-size: 14px;
-  /* color: #d0d0d0; */
-  color: #111;
-}
-
 /* scroll to the top */
 .scroll-up {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 0px;
+  bottom: 6px;
   right: 2px;
-  width: 28px;
-  height: 40px;
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
-  /* background-color: #58a785; */
-  /* background-color: #a0b8ad; */
-  background-color: rgba(160, 184, 173, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
 .scroll-up:hover {
-  /* background-color: #5d927a; */
-  background-color: #6c8278;
   transform: translateY(-3px);
 }
 
@@ -475,12 +399,3 @@ h3 {
     padding: 0 2px;
   }
 }
-
-/* @media (pointer: fine) {
-  a span {
-    display: none;
-  }
-  a:hover span {
-    display: inline-block;
-  }
-} */
