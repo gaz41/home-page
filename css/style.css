@@ -92,7 +92,7 @@ header {
 }
 
 #projects {
-  padding-bottom: 10px;
+  padding-bottom: 16px;
 }
 
 h2 {
@@ -116,17 +116,35 @@ h3 {
   padding: 0 0 20px 58px;
 }
 
+/* .spacer {
+  height: 100px;
+} */
+
 .spacer1 {
-  height: 150px;
+  height: 300px;
+  /* height: 100dvh; */
 }
 
 .spacer2 {
   height: 80px;
 }
 
-.about {
-  color: var(--color2);
+.description-container {
+  background-color: var(--color11);
+  padding: 0 0 70px 0;
+  margin: 0 20px;
+  border-radius: 16px;
+}
+
+.description p {
   padding: 10px 20px 0 20px;
+}
+
+.description-container.projects {
+  /* background-color: pink; */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 24px;
 }
 
 .grid-container {
@@ -155,7 +173,7 @@ h3 {
 }
 
 .card:hover {
-  background-color: var(--color12);
+  background-color: var(--color13);
   box-shadow: var(--boxShadow1);
 }
 
