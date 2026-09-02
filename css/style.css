@@ -92,7 +92,7 @@ header {
 }
 
 #projects {
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 
 h2 {
@@ -116,12 +116,8 @@ h3 {
   padding: 0 0 20px 58px;
 }
 
-/* .spacer {
-  height: 100px;
-} */
-
 .spacer1 {
-  height: 300px;
+  height: 400px;
   /* height: 100dvh; */
 }
 
@@ -141,7 +137,6 @@ h3 {
 }
 
 .description-container.projects {
-  /* background-color: pink; */
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   margin-bottom: 24px;
@@ -347,7 +342,7 @@ h3 {
   text-align: center;
   letter-spacing: var(--letterSpacing1);
   padding: 20px 0;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 /* fadeUp animation for cards */
