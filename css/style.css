@@ -83,7 +83,7 @@ header {
 }
 
 .gaz41image {
-  margin: 20px;
+  margin: 24px;
   overflow: hidden;
 }
 
@@ -116,13 +116,17 @@ h3 {
   padding: 0 0 20px 58px;
 }
 
-.spacer1 {
+.spacer1,
+.spacer2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 400px;
-  /* height: 100dvh; */
+  opacity: 0.5;
 }
 
 .spacer2 {
-  height: 80px;
+  height: 150px;
 }
 
 .description-container {
@@ -247,28 +251,26 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--font1);
-  font-size: 18px;
-  background-color: transparent;
+  background-color: var(--color11);
   color: var(--color2);
-  text-align: left;
+  font-family: var(--font1);
   letter-spacing: var(--letterSpacing1);
   padding: 10px 16px;
-  border: none;
-  border-top: 1px dotted var(--color6);
+  margin: 0 20px 24px 20px;
+  border-radius: 16px;
   outline: none;
   cursor: pointer;
   transition: 0.4s ease-out;
 }
 
-.accordion1 {
-  border-top: none;
+.accordion1 h2,
+.accordion2 h2 {
+  padding: 10px;
 }
 
 .accordion-name {
   color: var(--color2);
   letter-spacing: var(--letterSpacing1);
-  padding: 20px;
   transition: 500ms ease-out;
 }
 
@@ -298,6 +300,11 @@ h3 {
   color: var(--color2);
 }
 
+.accordionActive {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .accordionActive:hover {
   color: var(--color9);
 }
@@ -324,10 +331,12 @@ h3 {
   position: fixed;
   bottom: 6px;
   right: 2px;
+  opacity: 0.6;
   transition: all 0.4s ease-in-out;
 }
 
 .scroll-up:hover {
+  opacity: 1;
   transform: translateY(-3px);
 }
 
@@ -406,7 +415,7 @@ h3 {
   }
 
   .scroll-up {
-    bottom: 50px;
+    bottom: 60px;
   }
 }
 
