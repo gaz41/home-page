@@ -23,6 +23,7 @@
   --color11: #84a696;
   --color12: #f0f0f0;
   --color13: #ffffff;
+  --color14: #daa520;
 }
 
 *,
@@ -265,6 +266,7 @@ h3 {
 
 .accordion1 h2,
 .accordion2 h2 {
+  font-size: 18px;
   padding: 10px;
 }
 
@@ -321,6 +323,33 @@ h3 {
 
 .panel1 {
   margin-bottom: 80px;
+}
+
+.showDescription {
+  padding: 10px 30px;
+  letter-spacing: var(--letterSpacing1);
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  /* vertical-align: middle; */
+}
+
+.email-name {
+  letter-spacing: var(--letterSpacing1);
+  padding-left: 10px;
+}
+
+.email-icon {
+  opacity: 0.5;
+}
+
+::selection {
+  color: var(--color3);
+  background: var(--color14);
 }
 
 /* scroll to the top */
