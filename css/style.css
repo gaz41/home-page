@@ -335,15 +335,20 @@ h3 {
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
-  /* vertical-align: middle; */
 }
 
 .email-name {
   letter-spacing: var(--letterSpacing1);
-  padding-left: 10px;
+  padding-left: 8px;
+}
+
+.email a {
+  color: var(--color1);
+  text-decoration: none;
 }
 
 .email-icon {
+  vertical-align: middle;
   opacity: 0.5;
 }
 
