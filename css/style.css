@@ -9,6 +9,7 @@
   --letterSpacing3: 1.4px;
   --letterSpacing4: 4px;
   --letterSpacing5: 0.4px;
+  --transition1: 0.4s ease-in-out;
 
   --color1: #000000;
   --color2: #101010;
@@ -47,25 +48,27 @@ header {
   display: flex;
   background-color: var(--color2);
   color: var(--color8);
-  font-size: 32px;
   padding: 40px 30px;
   letter-spacing: var(--letterSpacing4);
 }
 
+header h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
 .header-top {
   display: flex;
-  align-items: flex-start;
+  align-items: last baseline;
   justify-content: space-between;
   width: 960px;
   margin: auto;
 }
 
-sup {
-  font-size: 26px;
-  letter-spacing: normal;
-  vertical-align: super;
+.logo-41 {
   color: var(--color11);
-  padding-left: 4px;
+  font-size: 34px;
+  letter-spacing: normal;
 }
 
 .nav a {
@@ -73,7 +76,7 @@ sup {
   color: var(--color7);
   padding: 0 10px;
   text-decoration: none;
-  transition: 0.4s ease-in-out;
+  transition: var(--transition1);
   cursor: pointer;
 }
 
@@ -131,7 +134,7 @@ h3 {
   align-items: center;
   justify-content: center;
   height: 400px;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .spacer2 {
@@ -178,7 +181,7 @@ h3 {
   animation-timeline: view(); /* Defines the timeline for the animation */
   animation-range: entry 0% cover 35%; /* Specifies the animation range */
   animation-duration: 0.4s; /* Duration of the animation - Firefox */
-  transition: all 0.4s ease-in-out; /* Smooth transition for all properties */
+  transition: all var(--transition1); /* Smooth transition for all properties */
 }
 
 .card:hover {
@@ -235,8 +238,8 @@ h3 {
   padding: 6px 12px;
   margin-right: 8px;
   letter-spacing: var(--letterSpacing2);
+  transition: var(--transition1);
   cursor: pointer;
-  transition: 300ms ease-out;
 }
 
 .btn:hover {
@@ -269,8 +272,8 @@ h3 {
   margin: 0 20px 24px 20px;
   border-radius: 16px;
   outline: none;
+  transition: var(--transition1);
   cursor: pointer;
-  transition: 0.4s ease-out;
 }
 
 .accordion1 h2,
@@ -282,7 +285,7 @@ h3 {
 .accordion-name {
   color: var(--color2);
   letter-spacing: var(--letterSpacing1);
-  transition: 500ms ease-out;
+  transition: var(--transition1);
 }
 
 .accordion-name:hover {
@@ -296,7 +299,7 @@ h3 {
   margin-left: 5px;
   color: var(--color2);
   font-size: 14px;
-  transition: 0.4s ease-out;
+  transition: var(--transition1);
 }
 
 .accordion1:hover:after,
@@ -305,15 +308,15 @@ h3 {
   letter-spacing: var(--letterSpacing3);
 }
 
+.accordionActive {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .accordionActive:after {
   content: "show less \2212\2212";
   font-size: 14px;
   color: var(--color2);
-}
-
-.accordionActive {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .accordionActive:hover {
@@ -328,6 +331,7 @@ h3 {
 .panel1,
 .panel2 {
   display: none;
+  transition: var(--transition1);
 }
 
 .panel1 {
@@ -346,11 +350,6 @@ h3 {
   padding: 20px;
 }
 
-.email-name {
-  letter-spacing: var(--letterSpacing1);
-  padding-left: 8px;
-}
-
 .email a {
   color: var(--color1);
   text-decoration: none;
@@ -361,27 +360,31 @@ h3 {
   opacity: 0.5;
 }
 
+.email-name {
+  letter-spacing: var(--letterSpacing1);
+  padding-left: 8px;
+}
+
 ::selection {
   color: var(--color3);
   background: var(--color14);
 }
 
-/* scroll to the top */
+/* SCROLL TO THE TOP */
 .scroll-up {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 16px;
+  bottom: 20px;
   right: 4px;
   padding: 8px;
   border-radius: 16px;
-  opacity: 0.5;
-  transition: all 0.4s ease-in-out;
+  opacity: 0.4;
+  transition: var(--transition1);
 }
 
 .scroll-up:hover {
-  background-color: var(--color11);
   opacity: 1;
   transform: translateY(-3px);
 }
@@ -397,10 +400,10 @@ h3 {
   text-align: center;
   letter-spacing: var(--letterSpacing1);
   padding: 20px 0;
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
-/* fadeUp animation for cards */
+/* fadeUp ANIMATION FOR CARDS */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -419,20 +422,23 @@ h3 {
     align-items: self-start;
   }
 
-  .logo {
-    padding-bottom: 10px;
-    margin: 0;
+  .header-top a {
+    margin-top: 10px;
   }
 
-  .nav {
-    margin: 0;
+  .logo {
+    padding-bottom: 10px;
   }
 
   .nav a {
     display: flex;
     flex-direction: column;
-    margin: 6px 0;
+    margin: px 0;
     padding: 0 10px;
+  }
+
+  .scroll-up {
+    bottom: 40px;
   }
 }
 
@@ -461,13 +467,40 @@ h3 {
   }
 
   .scroll-up {
-    bottom: 60px;
+    bottom: 66px;
   }
 }
 
 @media only screen and (max-width: 270px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    padding: 0 2px;
+    padding: 0 4px;
+  }
+
+  .description-container h2 {
+    font-size: 18px;
+  }
+
+  .description-container,
+  .description-container.projects,
+  .accordion1,
+  .accordion2 {
+    margin: 20px 4px;
+  }
+
+  .showDescription {
+    font-size: 14px;
+    padding: 20px 0 2px 10px;
+  }
+
+  .email {
+    flex-direction: column;
+    align-items: self-start;
+    padding: 10px 0 0 20px;
+  }
+
+  .email-name {
+    font-size: 14px;
+    padding-left: 0;
   }
 }
