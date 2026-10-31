@@ -4,6 +4,8 @@
   --font1: "Roboto", sans-serif;
   --backgroundColor1: #a0b8ad;
   --boxShadow1: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --boxShadow2:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   --letterSpacing1: 0.7px;
   --letterSpacing2: 1px;
   --letterSpacing3: 1.4px;
@@ -146,17 +148,14 @@ h3 {
   letter-spacing: var(--letterSpacing1);
   padding: 0 0 70px 0;
   margin: 0 20px;
-  border-radius: 16px;
+}
+
+.description-container.projects {
+  margin-bottom: 24px;
 }
 
 .description p {
   padding: 10px 20px 0 20px;
-}
-
-.description-container.projects {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-bottom: 24px;
 }
 
 .grid-container {
@@ -182,6 +181,7 @@ h3 {
   animation-range: entry 0% cover 35%; /* Specifies the animation range */
   animation-duration: 0.4s; /* Duration of the animation - Firefox */
   transition: all var(--transition1); /* Smooth transition for all properties */
+  box-shadow: var(--boxShadow2);
 }
 
 .card:hover {
@@ -193,7 +193,6 @@ h3 {
   background-color: var(--color12);
   width: 100%;
   border: none;
-  aspect-ratio: 16/9;
   object-fit: cover;
 }
 
@@ -270,7 +269,6 @@ h3 {
   letter-spacing: var(--letterSpacing1);
   padding: 10px 16px;
   margin: 0 20px 24px 20px;
-  border-radius: 16px;
   outline: none;
   transition: var(--transition1);
   cursor: pointer;
@@ -306,11 +304,6 @@ h3 {
 .accordion2:hover:after {
   color: var(--color3);
   letter-spacing: var(--letterSpacing3);
-}
-
-.accordionActive {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .accordionActive:after {
@@ -363,6 +356,13 @@ h3 {
 .email-name {
   letter-spacing: var(--letterSpacing1);
   padding-left: 8px;
+  transition: var(--transition1);
+}
+
+.email-name:hover {
+  color: var(--color3);
+  letter-spacing: var(--letterSpacing2);
+  text-decoration: underline;
 }
 
 ::selection {
