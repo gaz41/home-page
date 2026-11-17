@@ -1,6 +1,5 @@
 const scrollUp = document.getElementById("upIcon");
 const accordion1 = document.querySelector(".accordion1");
-const accordion2 = document.querySelector(".accordion2");
 const panel1 = document.getElementById("panel1");
 const panel2 = document.getElementById("panel2");
 const copyright = document.getElementById("copy");
@@ -16,15 +15,8 @@ window.onscroll = function () {
 };
 
 accordion1.addEventListener("click", () => {
-  // Toggle the 'accordionActive' class on the first accordion header
-  const isActive = accordion1.classList.toggle("accordionActive");
-  // Show or hide the first content panel based on the active state
-  panel1.style.display = isActive ? "block" : "none";
-});
-
-accordion2.addEventListener("click", () => {
   // Toggle the 'accordionActive' class on the second accordion header
-  const isActive = accordion2.classList.toggle("accordionActive");
+  const isActive = accordion1.classList.toggle("accordionActive");
   // Show or hide the second content panel based on the active state
   panel2.style.display = isActive ? "block" : "none";
 });

@@ -258,8 +258,7 @@ h3 {
   vertical-align: middle;
 }
 
-.accordion1,
-.accordion2 {
+.accordion1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -274,8 +273,7 @@ h3 {
   cursor: pointer;
 }
 
-.accordion1 h2,
-.accordion2 h2 {
+.accordion1 h2 {
   font-size: 18px;
   padding: 10px;
 }
@@ -290,8 +288,7 @@ h3 {
   color: var(--color4);
 }
 
-.accordion1:after,
-.accordion2:after {
+.accordion1:after {
   content: "show more \002B\002B";
   float: right;
   margin-left: 5px;
@@ -300,8 +297,7 @@ h3 {
   transition: var(--transition1);
 }
 
-.accordion1:hover:after,
-.accordion2:hover:after {
+.accordion1:hover:after {
   color: var(--color3);
   letter-spacing: var(--letterSpacing3);
 }
@@ -483,8 +479,7 @@ h3 {
 
   .description-container,
   .description-container.projects,
-  .accordion1,
-  .accordion2 {
+  .accordion1 {
     margin: 20px 4px;
   }
 
